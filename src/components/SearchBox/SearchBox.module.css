@@ -1,0 +1,19 @@
+.searchName {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 370px;
+  height: 150px;
+  margin-left: 30px;
+  padding: 20px 15px;
+  gap: 10px;
+  border-radius: 5px;
+  border: 1px solid navy;
+}
+.searchInput {
+  border: 1px solid navy;
+  border-radius: 5px;
+  margin-left: 10px;
+  padding: 10px 15px;
+}

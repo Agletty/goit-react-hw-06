@@ -1,0 +1,11 @@
+.contactItem {
+  display: block;
+  width: 200px;
+  margin: 10px auto;
+  padding: 7px 8px;
+
+  border-radius: 5px 5px;
+  border-color: navy;
+  border-width: 1px;
+  border-style: solid;
+}
