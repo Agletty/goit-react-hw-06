@@ -3,19 +3,13 @@ import Contact from "../Contact/Contact";
 import css from "./ContactList.module.css";
 import { selectContacts, selectNameFilter } from "../../redux/selectors";
 
-const getFilteredContacts = (contacts, statusFilter) => {
-  if (statusFilter && statusFilter.trim() !== "") {
-    return contacts.filter((contact) =>
-      contact.name.toLowerCase().includes(statusFilter.toLowerCase())
-    );
-  }
-  return contacts;
-};
-
 const ContactList = () => {
   const contacts = useSelector(selectContacts);
   const searchFilter = useSelector(selectNameFilter);
-  const filterContacts = getFilteredContacts(contacts, searchFilter);
+
+  const filterContacts = contacts.filter((contact) =>
+    contact.name.toLowerCase().includes(searchFilter.trim().toLowerCase())
+  );
 
   return (
     <div>

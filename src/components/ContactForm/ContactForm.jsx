@@ -9,7 +9,6 @@ const INITIAL_FORM_DATA = { name: "", number: "", id: nanoid() };
 
 const ContactFormSchema = Yup.object({
   name: Yup.string()
-    // .matches(/^[A-Za-z]+$/, "Must contain only letters")
     .min(3, "Must be at least 3 characters!")
     .max(50, "Must be 50 characters or less!")
     .required("Required"),
